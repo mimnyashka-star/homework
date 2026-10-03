@@ -3,33 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
 <body>
-    <div>
-        <div class="vert">
-            <div>
-                <div class="vert">
-                    <div class="tall box"></div>
-                    <div class="short box"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#000"/>
+                    <path d="M2 17L12 22L22 17" stroke="#000" stroke-width="2"/>
+                    <path d="M2 12L12 17L22 12" stroke="#000" stroke-width="2"/>
+                </svg>
+                Wikimedium
+            </div>
+            <div class="header-link">О проекте</div>
+        </header>
+
+        <section class="section-1">
+            <div class="row">
+                <div class="col-text">
+                    <h2>Наглядный пример, чтобы учиться вёрстке</h2>
+                    <p>Разработан для изучения основ веб-вёрстки, языка гипертекстовой разметки HTML и каскадных таблиц стилей CSS</p>
                 </div>
-                <div class="vert">
-                    <div>
-                        <div class="norm box"></div>
-                        <div class="norm box"></div>
-                    </div>
-                    <div class="long box"></div>
+                <div class="col-image">
+                    <img src="about1.png" alt="Пример на ноутбуке" class="img-desktop">
                 </div>
             </div>
-            <div>
-                <div class="long box"></div>
-                <div class="norm box"></div>
+        </section>
+
+        <section class="section-2">
+            <div class="row">
+                <div class="col-text">
+                    <h2>С нуля до первого сайта под компьютеры, смартфоны и планшеты</h2>
+                    <p>Чтобы начать изучать веб-вёрстку на этом проекте, не требуется каких-то специальных знаний, кроме базового умения пользоваться компьютером</p>
+                </div>
+                <div class="col-image">
+                    <img src="about2.png" alt="Пример на планшете" class="img-desktop">
+                </div>
             </div>
-        </div>
-        <div class="vert">
-            <div class="tall box"></div>
-            <div class="tall box"></div>
-        </div>
+        </section>
+
+        <section class="section-3">
+            <div class="row">
+                <div class="col-text">
+                    <h2>Реальный проект, реальный рабочий процесс</h2>
+                    <p>Обучение приближено к работе в реальной жизни, работа разбита на этапы от типографики, создания меню и использования эффектов, до адаптации под мобильные устройства и использования JavaScript скриптов</p>
+                </div>
+                <div class="col-image">
+                    <img src="about3.png" alt="Пример в браузере" class="img-desktop">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Возможность самостоятельного и курируемого обучения</h2>
+            <p>Вы можете обучаться самостоятельно по исходному коду проекта, выложенному на GitHub, или записаться на курс «Основы веб-вёрстки» в Школе Дизайна НИУ ВШЭ</p>
+            
+            <div class="buttons">
+                <div class="btn btn-outline">Исходный код на GitHub</div>
+                <div class="btn btn-solid">Курс в Школе Дизайна</div>
+            </div>
+        </section>
     </div>
+
+</body>
+</html>
+            </div>
+        </section>
+    </div>
+
 </body>
 </html>
