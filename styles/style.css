@@ -1,5 +1,4 @@
-
-* {
+ * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -7,174 +6,408 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #000;
-            line-height: 1.5;
-            background-color: #fff;
-            overflow-x: hidden;
+            background-color: #f7f8fa;
+            color: #1a1a1a;
+            line-height: 1.4;
+            padding: 20px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        h1, h2, h3 {
-            font-weight: 500;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 32px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .container {
+        .app-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
 
         header {
-            padding: 20px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 40px;
+            background: #fff;
         }
 
         .logo {
+            font-weight: 900;
+            font-size: 28px;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
             display: flex;
-            align-items: center;
-            font-weight: bold;
-            font-size: 18px;
+            gap: 30px;
         }
 
-        .logo img {
-            width: 24px;
-            margin-right: 10px;
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 15px;
+            font-weight: 500;
         }
 
-        .header-link {
+        .btn-primary {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .hero-banner {
+            background: #f0f2f5;
+            margin: 0 40px;
+            border-radius: 24px;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, #f472b6 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, #3b82f6 0%, transparent 25%),
+                radial-gradient(circle at 50% 100%, #34d399 0%, transparent 30%);
+        }
+
+        .hero-banner h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-dark {
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-content {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
             font-size: 14px;
-            color: #666;
+            outline: none;
+            background: #f9fafb;
         }
 
-        section {
-            padding: 80px 0;
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
         }
 
-        .row {
+        .filter-group {
+            margin-bottom: 24px;
+        }
+
+        .filter-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: #374151;
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            background: #f3f4f6;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #4b5563;
+            cursor: pointer;
+        }
+
+        .tag.active {
+            background: #e5e7eb;
+            color: #1a1a1a;
+        }
+
+        .checkbox-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .checkbox-item {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 10px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .checkbox-item input {
+            width: 16px;
+            height: 16px;
+            accent-color: #2563eb;
+        }
+
+        .salary-inputs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .salary-inputs input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .jobs-grid {
+            flex-grow: 1;
+            display: flex;
             flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .col-text {
-            width: 45%;
-            padding-right: 40px;
-        }
-
-        .col-image {
-            width: 50%;
+        .job-card {
+            width: calc(33.333% - 14px);
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
             position: relative;
         }
 
-        .img-desktop {
-            width: 100%;
-        }
-
-        .section-1 .col-image {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .section-2 .row {
-            flex-direction: row-reverse;
-        }
-
-        .section-2 .col-text {
-            padding-right: 0;
-            padding-left: 40px;
-        }
-
-        .section-3 {
-            border-bottom: 1px solid #eee;
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .cta-section h2 {
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-
-        .cta-section p {
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 16px;
-            border: 1px solid #000;
-            user-select: none;
-            pointer-events: none;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #000;
-        }
-
-        .btn-solid {
-            background: #000;
+        .badge-new {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #2563eb;
             color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            transform: rotate(-5deg);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
         }
 
-        @media (max-width: 900px) {
-            h2 { font-size: 28px; }
-            
-            .row {
-                flex-direction: column !important;
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .company-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .company-name {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .job-location {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .salary {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .job-tag {
+            font-size: 12px;
+            color: #6b7280;
+            background: #f3f4f6;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .job-level {
+            font-size: 12px;
+            color: #6b7280;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        footer {
+            background: #f0f2f5;
+            margin: 0 40px 40px 40px;
+            border-radius: 24px;
+            padding: 60px 40px 40px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            background-image: 
+                radial-gradient(circle at 10% 90%, #f472b6 0%, transparent 30%),
+                radial-gradient(circle at 90% 10%, #3b82f6 0%, transparent 30%),
+                radial-gradient(circle at 50% 50%, #34d399 0%, transparent 40%);
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .footer-btn {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .footer-logo {
+            font-weight: 900;
+            font-size: 48px;
+            letter-spacing: -2px;
+            margin-top: 60px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: right;
+            padding-top: 10px;
+        }
+
+        .footer-right a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+        }
+
+        @media (max-width: 1000px) {
+            .job-card {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
             }
 
-            .col-text, .col-image {
+            .sidebar {
                 width: 100%;
-                padding: 0;
             }
 
-            .col-text {
-                margin-bottom: 40px;
+            .job-card {
+                width: 100%;
             }
 
-            .section-2 .col-text {
-                padding-left: 0;
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
             }
-            
-            section {
-                padding: 50px 0;
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero-banner {
+                margin: 0 20px;
+                padding: 40px 15px;
+            }
+
+            .hero-banner h1 {
+                font-size: 28px;
+            }
+
+            footer {
+                margin: 0 20px 20px 20px;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-right {
+                text-align: left;
             }
         }

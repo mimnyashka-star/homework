@@ -8,70 +8,263 @@
 </head>
 <body>
 
-    <div class="container">
+   <div class="app-container">
         <header>
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#000"/>
-                    <path d="M2 17L12 22L22 17" stroke="#000" stroke-width="2"/>
-                    <path d="M2 12L12 17L22 12" stroke="#000" stroke-width="2"/>
-                </svg>
-                Wikimedium
-            </div>
-            <div class="header-link">О проекте</div>
+            <div class="logo">mattee</div>
+            <nav class="nav-links">
+                <a href="#">Вакансии</a>
+                <a href="#">Работодателям</a>
+            </nav>
+            <button class="btn-primary">Опубликовать</button>
         </header>
 
-        <section class="section-1">
-            <div class="row">
-                <div class="col-text">
-                    <h2>Наглядный пример, чтобы учиться вёрстке</h2>
-                    <p>Разработан для изучения основ веб-вёрстки, языка гипертекстовой разметки HTML и каскадных таблиц стилей CSS</p>
-                </div>
-                <div class="col-image">
-                    <img src="about1.png" alt="Пример на ноутбуке" class="img-desktop">
-                </div>
-            </div>
-        </section>
+        <div class="hero-banner">
+            <h1>Больше вакансий<br>в telegram-канале</h1>
+            <button class="btn-dark">Перейти в тг канал</button>
+        </div>
 
-        <section class="section-2">
-            <div class="row">
-                <div class="col-text">
-                    <h2>С нуля до первого сайта под компьютеры, смартфоны и планшеты</h2>
-                    <p>Чтобы начать изучать веб-вёрстку на этом проекте, не требуется каких-то специальных знаний, кроме базового умения пользоваться компьютером</p>
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Поиск">
                 </div>
-                <div class="col-image">
-                    <img src="about2.png" alt="Пример на планшете" class="img-desktop">
-                </div>
-            </div>
-        </section>
 
-        <section class="section-3">
-            <div class="row">
-                <div class="col-text">
-                    <h2>Реальный проект, реальный рабочий процесс</h2>
-                    <p>Обучение приближено к работе в реальной жизни, работа разбита на этапы от типографики, создания меню и использования эффектов, до адаптации под мобильные устройства и использования JavaScript скриптов</p>
+                <div class="filter-group">
+                    <div class="filter-title">Формат</div>
+                    <div class="filter-tags">
+                        <span class="tag">Парт-тайм</span>
+                        <span class="tag">Фулл-тайм</span>
+                        <span class="tag">Стажировка</span>
+                    </div>
                 </div>
-                <div class="col-image">
-                    <img src="about3.png" alt="Пример в браузере" class="img-desktop">
+
+                <div class="filter-group">
+                    <div class="filter-title">Формат</div>
+                    <div class="filter-tags">
+                        <span class="tag">Офис</span>
+                        <span class="tag">Удаленно</span>
+                        <span class="tag">Гибрид</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-title">Грейд</div>
+                    <div class="filter-tags">
+                        <span class="tag">Junior</span>
+                        <span class="tag">Middle</span>
+                        <span class="tag">Senior</span>
+                        <span class="tag">Lead</span>
+                        <span class="tag">Head</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-title">Локация</div>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox"> Москва</label>
+                        <label class="checkbox-item"><input type="checkbox"> Санкт-Петербург</label>
+                        <label class="checkbox-item"><input type="checkbox"> Казань</label>
+                        <label class="checkbox-item"><input type="checkbox"> Нижний Новгород</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-title">Зарплата</div>
+                    <div class="salary-inputs">
+                        <input type="text" placeholder="Минимум">
+                        <input type="text" placeholder="Максимум">
+                    </div>
+                </div>
+            </aside>
+
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="badge-new">Новое</div>
+                    <div class="card-header">
+                        <div class="company-logo">Т</div>
+                        <span class="company-name">Т-Банк</span>
+                    </div>
+                    <div class="job-title">Художник концепт-арта</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="badge-new">Новое</div>
+                    <div class="card-header">
+                        <div class="company-logo">А</div>
+                        <span class="company-name">Apple</span>
+                    </div>
+                    <div class="job-title">UI/UX Дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="badge-new">Новое</div>
+                    <div class="card-header">
+                        <div class="company-logo">В</div>
+                        <span class="company-name">ВТБ</span>
+                    </div>
+                    <div class="job-title">Графический дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">Т</div>
+                        <span class="company-name">Т-Банк</span>
+                    </div>
+                    <div class="job-title">Промышленный дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">А</div>
+                        <span class="company-name">Apple</span>
+                    </div>
+                    <div class="job-title">Диджитал дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">В</div>
+                        <span class="company-name">ВТБ</span>
+                    </div>
+                    <div class="job-title">Художник концепт-арта</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">Т</div>
+                        <span class="company-name">Т-Банк</span>
+                    </div>
+                    <div class="job-title">Промышленный дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">Т</div>
+                        <span class="company-name">Т-Банк</span>
+                    </div>
+                    <div class="job-title">Промышленный дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">Т</div>
+                        <span class="company-name">Т-Банк</span>
+                    </div>
+                    <div class="job-title">Промышленный дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">Т</div>
+                        <span class="company-name">Т-Банк</span>
+                    </div>
+                    <div class="job-title">Промышленный дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">В</div>
+                        <span class="company-name">ВТБ</span>
+                    </div>
+                    <div class="job-title">Графический дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="card-header">
+                        <div class="company-logo">В</div>
+                        <span class="company-name">ВТБ</span>
+                    </div>
+                    <div class="job-title">Графический дизайнер</div>
+                    <div class="job-location">📍 Москва, формат работы</div>
+                    <div class="card-footer">
+                        <span class="salary">280 000 ₽</span>
+                        <span class="job-tag">Фулл-тайм</span>
+                        <span class="job-level">Junior</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="cta-section">
-            <h2>Возможность самостоятельного и курируемого обучения</h2>
-            <p>Вы можете обучаться самостоятельно по исходному коду проекта, выложенному на GitHub, или записаться на курс «Основы веб-вёрстки» в Школе Дизайна НИУ ВШЭ</p>
-            
-            <div class="buttons">
-                <div class="btn btn-outline">Исходный код на GitHub</div>
-                <div class="btn btn-solid">Курс в Школе Дизайна</div>
+        <footer>
+            <div class="footer-left">
+                <button class="footer-btn">Опубликовать вакансию</button>
+                <div class="footer-logo">mattee</div>
             </div>
-        </section>
-    </div>
-
-</body>
-</html>
+            <div class="footer-right">
+                <a href="#">Вакансии</a>
+                <a href="#">Работодателям</a>
+                <a href="#">Telegram</a>
+                <a href="#">Техподдержка</a>
             </div>
-        </section>
+            <div class="copyright">© 2025</div>
+        </footer>
     </div>
 
 </body>
